@@ -12,7 +12,30 @@ root {
   max-width: 1920px;
   margin: 0 auto;
 }
+section{
+    padding:45px 32px;
+}
+.title{
+    width: 20%;
+    font-weight:bold;
+    font-size:32px;
+    line-height:48px;
+}
+.wrapper{
+    display:flex;
+}
+.section-light{
+    background: $light;
 
+}
+.section-dark{
+    background: $dark;
+}
+p{
+    margin-bottom:16px;
+    font-size:16px;
+    line-height:26px;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -52,6 +75,7 @@ nav {
   }
 }
 .section-presentation {
+    padding: 0;
   .container-slider {
     display: flex;
     color: $light;
@@ -65,6 +89,7 @@ nav {
     .header-container-description {
       align-self: center;
       .header-description {
+        margin:0;
         padding: 5px;
         font-size: 20px;
         font-weight: 400;
@@ -89,10 +114,28 @@ nav {
     }
   }
 }
+}
 
 //section who-we-are
 
-.section-who-we-are {
+.who-we-are {
   background: #fff;
   color: #000;
+  display:flex;
+  padding-bottom:0;
+    &-description{
+        width:35%;
+        h3{
+            font-size:20px;
+            font-weight: bold;
+            margin-bottom:24px;
+        }
+    }
+    &-img{
+        align-self: flex-end;
+        margin-bottom:-3px;
+        width:45%;
+        max-width: 960px;
+    }
+    
 }

@@ -11,6 +11,35 @@ root {
   margin: 0 auto;
 }
 
+section {
+  padding: 45px 32px;
+}
+
+.title {
+  width: 20%;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.section-light {
+  background: #f1e0cb;
+}
+
+.section-dark {
+  background: #0d0b0e;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -49,6 +78,9 @@ nav .bmw-in-yourcountry a:hover {
   text-decoration: underline;
 }
 
+.section-presentation {
+  padding: 0;
+}
 .section-presentation .container-slider {
   display: flex;
   color: #f1e0cb;
@@ -60,6 +92,7 @@ nav .bmw-in-yourcountry a:hover {
   align-self: center;
 }
 .section-presentation .container-slider .header-container-description .header-description {
+  margin: 0;
   padding: 5px;
   font-size: 20px;
   font-weight: 400;
@@ -69,19 +102,36 @@ nav .bmw-in-yourcountry a:hover {
   font-weight: bold;
   margin-bottom: 30px;
 }
-.section-presentation .container-slider .header-link {
+.section-presentation .container-slider .header-container-description .header-link {
   color: #fff;
   text-decoration: none;
   background-color: #ff595a;
   padding: 10px 30px;
   transition: background-color 0.2s;
+  font-weight: 700;
 }
-.section-presentation .container-slider .header-link:hover {
+.section-presentation .container-slider .header-container-description .header-link:hover {
   background-color: #c70039;
   transition: background-color 0.2s;
 }
 
-.section-who-we-are {
+.who-we-are {
   background: #fff;
   color: #000;
+  display: flex;
+  padding-bottom: 0;
+}
+.who-we-are-description {
+  width: 35%;
+}
+.who-we-are-description h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.who-we-are-img {
+  align-self: flex-end;
+  margin-bottom: -3px;
+  width: 45%;
+  max-width: 960px;
 }/*# sourceMappingURL=styles.css.map */
