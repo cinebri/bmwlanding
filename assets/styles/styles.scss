@@ -1,0 +1,95 @@
+$dark:#0D0B0E;
+$red:#FF595A;
+$light:#F1E0CB;
+body{
+    background: $dark;
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+root{
+    max-width:1920px;
+    margin:0 auto;
+}
+section{
+    height: 100vh;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    color:#F1E0CB;
+        a{
+        color:#F1E0CB;
+        text-decoration:none;
+        }
+        .menu{
+            flex-grow:1;
+            text-align: center;
+        }
+        .menu, .bmw-in-yourcountry{
+            padding:25px;
+            position: relative;    
+        }
+        .bmw-in-yourcountry img {
+            position: absolute;
+            left:-3px
+        }
+        .menu a{
+            
+            margin-right:20px;
+        }
+        .menu a:first-child{
+            padding-left:100px;
+        }
+        .menu a:last-child{
+            margin-right: 0;
+        }
+        
+        
+}
+header{
+    display:flex; 
+    color:$light;
+    flex-wrap: nowrap;
+    .car-img-container{
+        
+    }
+    .header-container-description{
+        margin-left:30px;
+        margin-top:200px;
+
+    }
+    .header-container-description > *{
+        width: 405px;
+        // text-align: center;
+        
+
+    }
+    .header-description{
+        width:315px;
+    }
+    h1{
+        font-size:90px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    .header-link{
+        color:#fff;
+        text-decoration: none;
+        background-color: $red;
+        padding:10px 30px;
+        transition: background-color 0.2s;
+    }
+    .header-link:hover{
+        background-color: #C70039;
+        transition: background-color 0.2s;
+    }
+}
+
+//section who-we-are
+
+.who-we-are{
+
+}
