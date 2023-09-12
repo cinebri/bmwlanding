@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles/reset.css">
-    <link rel="stylesheet" href="/assets/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles/reset.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>BMW</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="root">
-    <nav>
+      <nav>
         <a href="#" class="logo-link">
-            <img src="/assets/images/LOGO.svg" alt="BMW-LOGO" class="logo">
-            </a>
-            <div class="menu">
-            <!-- <a href="#">v</a> -->
+          <svg class="icon logo">
+            <use xlink:href="/assets/images/sprite.svg#LOGO"></use>
+          </svg>
+        </a>
+        <ul class="menu">
+          <li>
+            <a href="#">Models</a>
+          </li>
+          <li>
             <a href="#">Blog</a>
+          </li>
+          <li>
             <a href="#">Events</a>
+          </li>
+          <li>
             <a href="#">Podcasts</a>
-            </div>
+          </li>
+        </ul>
+
         <span class="bmw-in-yourcountry">
-            <a href="#">
-                <img src="/assets/images/Vector.png" alt="Globus">
-                <span>BMW in your country</span>
-            </a>
+          <a href="#">
+            <img src="/assets/images/Vector.png" alt="Globus" />
+            <span>BMW in your country</span>
+          </a>
         </span>
-    </nav>
-    <section class="section-presentation">
-    <header>
-        <div class="car-img-container"><img src="/assets/images/LEFT.png" alt="BMW IX3" width=960px height=620px></div>
-        <div class="header-container-description">
-            <p class="header-description">
-                A NEW ERA OF DRIVING PLEASURE.
-                CHOOSE THE FULL ELECTRIC</p>
-            <h1>BMW IX3</h1>
-            <a href="" class="header-link">Configure</a>
+      </nav>
+      <section class="section-presentation">
+        <header>
+          <div class="container-slider">
+            <div class="slider-item">
+            <img
+              src="/assets/images/LEFT.png"
+              alt="BMW IX3"
+              width="960px"
+              height="620px"
+            /></div>
+            <div class="header-container-description">
+                <p class="header-description">
+                    A NEW ERA OF DRIVING PLEASURE. 
+                </p>
+                <p class="header-description">
+                    CHOOSE THE FULL ELECTRIC
+                </p>
+                <h1>BMW IX3</h1>
+                <a href="" class="header-link">Configure</a>
+            </div>
         </div>
-    </header>
-</section>
-<section class="section-who-we-are"></section>
-<section></section>
-<section></section>
-<section></section>
-</div>
-</body>
+        </header>
+      </section>
+      <section class="section-who-we-are"></section>
+      <section></section>
+      <section></section>
+      <section></section>
+    </div>
+  </body>
 </html>
