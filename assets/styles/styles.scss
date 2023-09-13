@@ -12,29 +12,37 @@ root {
   max-width: 1920px;
   margin: 0 auto;
 }
-section{
-    padding:45px 32px;
+section {
+  padding: 45px 32px;
 }
-.title{
-    width: 20%;
-    font-weight:bold;
-    font-size:32px;
-    line-height:48px;
+.title {
+  width: 20%;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 48px;
 }
-.wrapper{
-    display:flex;
-}
-.section-light{
-    background: $light;
+.wrapper {
+  display: flex;
 
+  &-podcasts {
+    display: flex;
+    max-width: 1540px;
+    margin: 0 auto;
+  }
 }
-.section-dark{
-    background: $dark;
+.section-light {
+  background: #fff;
+  color: #000;
 }
-p{
-    margin-bottom:16px;
-    font-size:16px;
-    line-height:26px;
+.section-dark {
+  background: $dark;
+  color: #fff;
+}
+p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 0;
 }
 nav {
   display: flex;
@@ -75,7 +83,7 @@ nav {
   }
 }
 .section-presentation {
-    padding: 0;
+  padding: 0;
   .container-slider {
     display: flex;
     color: $light;
@@ -89,7 +97,7 @@ nav {
     .header-container-description {
       align-self: center;
       .header-description {
-        margin:0;
+        margin: 0;
         padding: 5px;
         font-size: 20px;
         font-weight: 400;
@@ -99,43 +107,168 @@ nav {
         font-weight: bold;
         margin-bottom: 30px;
       }
-    
-    .header-link {
-      color: #fff;
-      text-decoration: none;
-      background-color: $red;
-      padding: 10px 30px;
-      transition: background-color 0.2s;
-      font-weight: 700;
-      &:hover {
-        background-color: #c70039;
+
+      .header-link {
+        color: #fff;
+        text-decoration: none;
+        background-color: $red;
+        padding: 10px 30px;
         transition: background-color 0.2s;
+        font-weight: 700;
+        &:hover {
+          background-color: #c70039;
+          transition: background-color 0.2s;
+        }
       }
     }
   }
 }
-}
-
-//section who-we-are
 
 .who-we-are {
   background: #fff;
   color: #000;
-  display:flex;
-  padding-bottom:0;
-    &-description{
-        width:35%;
-        h3{
-            font-size:20px;
-            font-weight: bold;
-            margin-bottom:24px;
-        }
+  display: flex;
+  padding-bottom: 0;
+  &-description {
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 24px;
+      line-height: 30px;
+      color: #000;
     }
-    &-img{
-        align-self: flex-end;
-        margin-bottom:-3px;
-        width:45%;
-        max-width: 960px;
+    width: 35%;
+    color: #214b64;
+    p:last-child {
+      margin-bottom: 0;
     }
-    
+  }
+  &-img {
+    align-self: flex-end;
+    margin-bottom: -3px;
+    width: 45%;
+    max-width: 960px;
+  }
 }
+
+.section-sheer-driving-pleasure {
+  text-align: center;
+  padding: 15px 0;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+}
+.section-models {
+  .title {
+    min-width: 215px;
+  }
+  .models {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 85%;
+    background: #fff;
+
+    &-item {
+      background: $light;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: calc(100% / 3 - 40px);
+      min-width: 235px;
+      height: 380px;
+
+      .price {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        line-height: 21px;
+        font-size: 14px;
+      }
+      .new {
+        padding: 3px 15px;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        background: $red;
+        font-weight: bold;
+        font-size: 10px;
+        text-transform: uppercase;
+        line-height: 15px;
+        color: #fff;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        align-self: flex-end;
+        text-align: center;
+      }
+      h3 {
+        font-size: 20px;
+        padding-left: 24px;
+        font-weight: bold;
+      }
+      p {
+        padding: 24px;
+        font-size: 12px;
+        color: #214b64;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+// .section-podcasts {
+//   background: #fff;
+
+//   .podcasts-annoucement {
+//     width: 630px;
+//     margin:0 auto;
+//     .podcast-annoucement-container{
+//       text-align: center;
+//       width: 600px;
+//       margin: 0 auto;
+//     }
+//     h2 {
+//       color: #0d0b0e;
+//       font-size: 32px;
+//       font-weight: 500;
+//       line-height: 48px;
+//     }
+//     p {
+//       font-size: 16px;
+//       line-height: 26px;
+//       color: #214b64;
+//     }
+//   }
+//   .podcasts-buttons {
+//     text-align: center;
+//     display:flex;
+//     flex-direction: column;
+//     .podcasts-buttons-container-wide{
+//       width: 630px;
+//       display:flex;
+//       gap:32px;
+//     }
+//     .podcasts-buttons-container-tight{
+//       width: 560px;
+//       display:flex;
+//       gap:32px;
+//     }
+//     .podcasts-button {
+      
+//       padding: 8px 48px;
+//       color: #fff;
+//       background: $light;
+//       border: none;
+//       outline: none;
+//     }
+//     .button-selected {
+//       background: $red;
+//     }
+//   }
+// }
+
