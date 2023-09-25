@@ -1,6 +1,9 @@
 $dark: #0d0b0e;
 $red: #ff595a;
 $light: #f1e0cb;
+img {
+  width: 100%;
+}
 body {
   background: #fff;
   margin: 0;
@@ -54,6 +57,7 @@ nav {
   justify-content: space-between;
   color: #f1e0cb;
   align-items: center;
+  padding: 24px;
   a {
     color: #f1e0cb;
     text-decoration: none;
@@ -67,33 +71,51 @@ nav {
     justify-content: center;
     column-gap: 20px;
   }
+  @media only screen and (max-width: 640px) {
+    .menu {
+      display: none;
+    }
+  }
+
   .menu,
   .bmw-in-yourcountry {
-    padding: 42px 32px;
     position: relative;
   }
   .bmw-in-yourcountry {
     img {
       position: absolute;
-      left: 0;
-      bottom: 42px;
+      left: -27px;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
     }
     a:hover {
       text-decoration: underline;
     }
   }
   @media only screen and (max-width: 640px) {
-    .bmw-in-yourcountry a span{
-      display:none;
+    .bmw-in-yourcountry {
+      display: none;
     }
     .bmw-in-yourcountry img {
-      bottom:30px;
+      bottom: 30px;
     }
   }
 }
 .section-presentation {
   padding: 0;
   .container-slider {
+    .slider-item {
+      @media only screen and (max-width: 900px) {
+        width: 600px;
+      }
+      @media only screen and (max-width: 700px) {
+        width: 450px;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 300px;
+      }
+    }
     display: flex;
     color: $light;
     flex-wrap: nowrap;
@@ -110,11 +132,34 @@ nav {
         padding: 5px;
         font-size: 20px;
         font-weight: 400;
+        @media only screen and (max-width: 900px) {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        @media only screen and (max-width: 700px) {
+          font-size: 15px;
+          line-height: 20px;
+        }
+        @media only screen and (max-width: 600px) {
+          font-size: 13px;
+          line-height: 16px;
+        }
       }
       h1 {
-        font-size: 90px;
+        font-size: 5.55em;
         font-weight: bold;
         margin-bottom: 30px;
+        @media only screen and (max-width: 900px) {
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+        @media only screen and (max-width: 700px) {
+          font-size: 40px;
+        }
+        @media only screen and (max-width: 600px) {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
       }
 
       .header-link {
@@ -124,6 +169,17 @@ nav {
         padding: 10px 30px;
         transition: background-color 0.2s;
         font-weight: 700;
+        @media only screen and (max-width: 900px) {
+          font-size: 14px;
+          padding: 6px 14px;
+          font-weight: 500;
+        }
+        @media only screen and (max-width: 700px) {
+          font-size: 12px;
+        }
+        @media only screen and (max-width: 600px) {
+          font-size: 10px;
+        }
         &:hover {
           background-color: #c70039;
           transition: background-color 0.2s;
@@ -171,7 +227,7 @@ nav {
 }
 .section-models {
   .title {
-    min-width: 215px;
+    // min-width: 215px;
   }
   .models {
     display: flex;
@@ -363,6 +419,7 @@ nav {
   background: #fff;
   text-align: center;
   padding: 45px 0;
+  max-width: 100%;
   .gallery {
     &-container {
       margin-bottom: 45px;
@@ -380,7 +437,7 @@ nav {
     &-back-to-history {
       opacity: 0;
       transition: opacity 0.2s;
-      z-index:1
+      z-index: 1;
     }
 
     &-row {
@@ -476,5 +533,42 @@ footer {
     font-size: 13px;
     font-weight: 400;
     text-transform: capitalize;
+  }
+}
+
+//adaptive
+
+.mobile-menu {
+  display: none;
+  position: relative;
+  &-list {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 24px;
+    background: $light;
+    text-transform: uppercase;
+    font-weight: 400;
+    li:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    a {
+      color: black;
+    }
+  }
+  @media only screen and (max-width: 640px) {
+    display: flex;
+    .menu {
+      display: none;
+    }
+  }
+  &__button {
+    color: $light;
+    padding: 10px;
+    &:hover {
+      & + .mobile-menu-list {
+        display: block;
+      }
+    }
   }
 }
