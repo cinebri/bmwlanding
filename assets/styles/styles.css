@@ -25,6 +25,14 @@ section {
   font-weight: bold;
   font-size: 32px;
   line-height: 48px;
+  min-width: 200px;
+}
+@media only screen and (max-width: 600px) {
+  .title {
+    width: 15%;
+    min-width: 150px;
+    font-size: 20px;
+  }
 }
 
 .wrapper {
@@ -228,7 +236,8 @@ nav .bmw-in-yourcountry a:hover {
   background: #fff;
   color: #000;
   display: flex;
-  padding-bottom: 0;
+  padding: 45px 0 0 32px;
+  position: relative;
 }
 .who-we-are-description {
   width: 35%;
@@ -245,10 +254,38 @@ nav .bmw-in-yourcountry a:hover {
   margin-bottom: 0;
 }
 .who-we-are-img {
-  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   margin-bottom: -3px;
   width: 45%;
-  max-width: 960px;
+}
+@media only screen and (max-width: 1200px) {
+  .who-we-are {
+    padding-right: 32px;
+  }
+  .who-we-are .wrapper {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .who-we-are-description {
+    width: 100%;
+    color: #0d0b0e;
+    line-height: 10px;
+    padding-bottom: 20px;
+  }
+  .who-we-are-description p {
+    line-height: 25px;
+  }
+  .who-we-are-img {
+    opacity: 0.3;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .who-we-are-img {
+    width: 70%;
+  }
 }
 
 .section-sheer-driving-pleasure {
@@ -314,6 +351,44 @@ nav .bmw-in-yourcountry a:hover {
   font-size: 12px;
   color: #214b64;
   line-height: 18px;
+}
+@media only screen and (max-width: 1000px) {
+  .section-models .title {
+    align-self: flex-start;
+  }
+  .section-models .models {
+    gap: 13px;
+  }
+  .section-models .models-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section-models .models-item {
+    width: calc(33.3333333333% - 13px);
+    min-width: unset;
+  }
+  .section-models .models-item h3 {
+    font-size: 13px;
+  }
+  .section-models .models-item .price {
+    font-size: 10px;
+  }
+  .section-models .models-item .new {
+    font-size: 10px;
+  }
+  .section-models .models-item p {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .section-models .models-item {
+    width: calc(50% - 13px);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .section-models .models-item {
+    width: calc(100% - 13px);
+  }
 }
 
 .section-podcasts .title {
@@ -450,12 +525,23 @@ nav .bmw-in-yourcountry a:hover {
   flex-direction: column;
   row-gap: 5px;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 .section-gallery .gallery-link {
   text-decoration: none;
   color: #fff;
   font-size: 70px;
   font-weight: 700;
+}
+@media only screen and (max-width: 900px) {
+  .section-gallery .gallery-link {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .section-gallery .gallery-link {
+    font-size: 30px;
+  }
 }
 .section-gallery .gallery-back-to-history {
   opacity: 0;
@@ -488,6 +574,16 @@ nav .bmw-in-yourcountry a:hover {
   align-items: center;
   text-align: center;
   overflow: hidden;
+}
+@media only screen and (max-width: 900px) {
+  .section-gallery .gallery-item {
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .section-gallery .gallery-item {
+    height: 250px;
+  }
 }
 .section-gallery .gallery-item:before {
   content: "";
